@@ -14,7 +14,7 @@
         }
 
         table{
-             
+             border-collapse: collapse;
             padding: 10px;
         }
 
@@ -42,6 +42,13 @@
             border: 1px solid black;
             padding: 10px;
         }
+
+        #ctg{
+            text-align: center;
+        }
+
+        /*USA A TAG OVERFLOW-X PRA CRIAR UMA BARRA LATERAL DE SCROLLAR SO PRA TABELA, PARA FAZER ISSO COLOCA A TABLE TODA EM UMA DIV DPS CRIA UM ID E NO ID USA A TAG OVERFLOW-X, DPS COLOCA AUTO ( TESTA OS OUTROS OVERFLOWS E OPÇÕES SEM SER AUTO)!!!!!!!!!!!*/
+        
     </style>
 </head>
 <body>
@@ -54,12 +61,23 @@
 
     <tr>
 
-        <th>Área</th>
-        <th>Disciplina</th>
-        <th>Notas</th>
+        <th rowspan="2">Área</th>
+        <th rowspan="2">Disciplina</th>
+        <th colspan="2">Notas</th> 
+        <th rowspan="2">Média</th>
+      
+
+
+    </tr>
+
+
+    <tr>
+
+        
+
         <th>Nota 1</th>
         <th>Nota 2</th>
-        <th>Média</th>
+        
 
     </tr>
 
@@ -69,7 +87,7 @@
 
     <tr>
 
-        <td rowspan="4">Exatas</td>
+        <td id="ctg" rowspan="4"><strong>Exatas</strong></td>
         <td>Matemática</td>
         <td>0.0</td>
         <td>0.0</td>
@@ -105,7 +123,7 @@
 
     <tr>
 
-        <td rowspan="2">Humanas</td>
+        <td id="ctg" rowspan="2"><strong>Humanas</strong></td>
         <td>História</td>
         <td>0.0</td>
         <td>0.0</td>
